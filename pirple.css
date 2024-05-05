@@ -1,0 +1,86 @@
+/* Common styles for all screen sizes */
+
+/* Page Title */
+header h1 {
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 10px; /* Add padding below h1 */
+}
+
+/* Introduction section */
+#introduction p {
+    font-size: 16px; /* Medium font size */
+}
+
+/* Ingredients section */
+#ingredients .ingredient-list {
+    list-style-image: url('bullet-point-icon.png'); /* Change bullet points to custom image */
+}
+
+.ingredient-item {
+    font-size: 16px; /* Medium font size */
+}
+
+/* Finished Dish section */
+#finished-dish .dish-image {
+    margin: 10px 0; /* Add margin around images */
+    border-radius: 5px; /* Add border radius */
+    width: 33%;
+    height: 300px;
+
+}
+
+/* Preparation section */
+#preparation .preparation-steps {
+    list-style-type: upper-roman; /* Change numbers to roman numerals */
+}
+
+.step-item {
+    font-size: 16px; /* Medium font size */
+}
+
+/* Description section */
+#description p span {
+    font-style: italic; /* Make <span> elements within <p> italic */
+}
+
+#description p span.special-class {
+    font-style: normal;
+    color: red; /* Remove italics and apply red color */
+}
+
+#description p span:last-child {
+    text-decoration: underline; /* Make the last <span> underlined */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Target screens smaller than 400px */
+@media screen and (max-width: 400px) {
+    /* Adjust font sizes, hide or show content, etc. */
+    header h1 {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+
+    /* Adjust other styles as needed */
+}
+
+/* Target screens between 401px and 750px */
+@media screen and (min-width: 401px) and (max-width: 750px) {
+    /* Adjust font sizes, hide or show content, etc. */
+    .ingredient-item, .step-item {
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+
+    /* Adjust other styles as needed */
+}
+
+/* Target screens larger than 750px */
+@media screen and (min-width: 751px) {
+    /* Adjust font sizes, hide or show content, etc. */
+    .ingredient-item, .step-item {
+        font-size: 16px; /* Reset font size for larger screens */
+    }
+
+    /* Adjust other styles as needed */
+}
